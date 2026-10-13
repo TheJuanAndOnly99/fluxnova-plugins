@@ -1,0 +1,15 @@
+name: "PR License Check"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  license-check:
+    name: License Check
+    uses: ./.github/workflows/license-scanning.yml
