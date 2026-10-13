@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
   workflow_call:
   push:
-    paths:
-      - '**/pom.xml'
-      - '.github/workflows/license-scanning.yml'
+    branches:
+      - main
+  pull_request:
 
 permissions:
   contents: read
